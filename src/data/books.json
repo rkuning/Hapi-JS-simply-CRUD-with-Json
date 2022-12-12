@@ -1,0 +1,30 @@
+[
+  {
+    "id": "IRta6iKxPZGyJxpe",
+    "name": "dicoding Jobs",
+    "year": 2010,
+    "author": "John Doe",
+    "summary": "Lorem ipsum dolor sit amet",
+    "publisher": "Dicoding Indonesia",
+    "pageCount": 100,
+    "readPage": 0,
+    "finished": false,
+    "reading": false,
+    "insertedAt": "2022-12-12T18:09:09.302Z",
+    "updatedAt": "2022-12-12T18:09:09.302Z"
+  },
+  {
+    "id": "cCbgBFKy91Ihwcu1",
+    "name": "Buku A",
+    "year": 2010,
+    "author": "John Doe",
+    "summary": "Lorem ipsum dolor sit amet",
+    "publisher": "Dicoding Indonesia",
+    "pageCount": 100,
+    "readPage": 0,
+    "finished": false,
+    "reading": false,
+    "insertedAt": "2022-12-12T18:09:11.559Z",
+    "updatedAt": "2022-12-12T18:09:11.559Z"
+  }
+]
