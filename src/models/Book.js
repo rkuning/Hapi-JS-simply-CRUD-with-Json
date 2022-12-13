@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-throw-literal */
 /* eslint-disable no-param-reassign */
 const fs = require('fs');
@@ -52,10 +53,8 @@ class Book {
       books = JSON.parse(books).map((book) => {
         // eslint-disable-next-line max-len
         const {
-          // eslint-disable-next-line max-len
           id, name, year, author, summary, publisher, pageCount, readPage, finished, reading, insertedAt, updatedAt,
         } = book;
-        // eslint-disable-next-line max-len
         return new Book(id, name, year, author, summary, publisher, pageCount, readPage, finished, reading, insertedAt, updatedAt);
       });
       return books;
@@ -76,10 +75,14 @@ class Book {
         if (!valQuery) throw { error: 'Query unknown!' };
         if (q.length > 1) throw { error: 'Only allow 1 query!' };
         // eslint-disable-next-line array-callback-return, consistent-return
-        if (q[0] === 'reading') books = books.filter((book) => ((parseInt(query.reading, 10)) ? book.reading === true : book.reading === false));
-        if (q[0] === 'finished') books = books.filter((book) => ((parseInt(query.finished, 10)) ? book.finished === true : book.finished === false));
-        // // perbaikan besuk
-        if (q[0] === 'name') books = books.filter((book) => book.name.includes(query.name));
+        if (q[0] === 'reading') {
+          books = books.filter((book) => ((parseInt(query.reading, 10)) ? book.reading === true : book.reading === false));
+        } else if (q[0] === 'finished') {
+          books = books.filter((book) => ((parseInt(query.finished, 10)) ? book.finished === true : book.finished === false));
+        } else if (q[0] === 'name') {
+          // mohon di koreksi mas untuk kode saya yang ini. kenapa data jsonnya jadi ikut berubah ya? padahal nggak ngejalanin writeFile, cuma readFile saja.
+          books = books.filter((book) => book.name.toLowerCase().includes(query.name.toLowerCase()));
+        }
       }
       return books;
     } catch (error) {

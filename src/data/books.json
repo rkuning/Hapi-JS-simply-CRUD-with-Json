@@ -1,62 +1,34 @@
 [
   {
-    "id": "6YS-FpRP8q6sXW-9",
+    "id": "zixr5rukm1QCQlA8",
     "name": "Buku A",
     "year": 2010,
     "author": "John Doe",
     "summary": "Lorem ipsum dolor sit amet",
     "publisher": "Dicoding Indonesia",
     "pageCount": 100,
-    "readPage": 100,
-    "finished": true,
-    "reading": true,
-    "insertedAt": "2022-12-13T11:04:10.278Z",
-    "updatedAt": "2022-12-13T11:04:10.278Z"
-  },
-  {
-    "id": "AVED9UvhJlezv20i",
-    "name": "Kelas Dicoding",
-    "year": 2010,
-    "author": "John Doe",
-    "summary": "Lorem ipsum dolor sit amet",
-    "publisher": "Dicoding Indonesia",
-    "pageCount": 100,
-    "readPage": 99,
-    "finished": false,
-    "reading": true,
-    "insertedAt": "2022-12-13T11:04:13.530Z",
-    "updatedAt": "2022-12-13T11:04:13.530Z"
-  },
-  {
-    "id": "wUe_cxYb7DTAsmdx",
-    "name": "dicoding Jobs",
-    "year": 2010,
-    "author": "John Doe",
-    "summary": "Lorem ipsum dolor sit amet",
-    "publisher": "Dicoding Indonesia",
-    "pageCount": 100,
-    "readPage": 0,
+    "readPage": 25,
     "finished": false,
     "reading": false,
-    "insertedAt": "2022-12-13T11:04:16.687Z",
-    "updatedAt": "2022-12-13T11:04:16.687Z"
+    "insertedAt": "2022-12-13T13:57:27.090Z",
+    "updatedAt": "2022-12-13T13:57:27.090Z"
   },
   {
-    "id": "wCRexi5GI_jRFCZs",
+    "id": "Yn1ypFze2o0G4ofN",
     "name": "Buku A",
     "year": 2010,
     "author": "John Doe",
     "summary": "Lorem ipsum dolor sit amet",
     "publisher": "Dicoding Indonesia",
     "pageCount": 100,
-    "readPage": 0,
+    "readPage": 25,
     "finished": false,
     "reading": false,
-    "insertedAt": "2022-12-13T11:04:19.614Z",
-    "updatedAt": "2022-12-13T11:04:19.614Z"
+    "insertedAt": "2022-12-13T13:57:34.961Z",
+    "updatedAt": "2022-12-13T13:57:34.961Z"
   },
   {
-    "id": "n7Vs0R1UzYNajfVl",
+    "id": "Y4vvTfk3-sMPaXpu",
     "name": "Buku A Revisi",
     "year": 2011,
     "author": "Jane Doe",
@@ -66,7 +38,7 @@
     "readPage": 26,
     "finished": false,
     "reading": false,
-    "insertedAt": "2022-12-13T11:23:49.378Z",
-    "updatedAt": "2022-12-13T11:24:03.797Z"
+    "insertedAt": "2022-12-13T13:58:01.636Z",
+    "updatedAt": "2022-12-13T13:59:12.897Z"
   }
 ]

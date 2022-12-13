@@ -25,7 +25,6 @@ class BookController {
   static async getBooks(request, h) {
     try {
       let dataBooks = await Book.getAllBooks(request);
-      console.log(dataBooks);
       const { error } = dataBooks;
       if (error) throw error;
       // eslint-disable-next-line max-len
