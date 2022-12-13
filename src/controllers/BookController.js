@@ -24,7 +24,10 @@ class BookController {
 
   static async getBooks(request, h) {
     try {
-      let dataBooks = await Book.getBooks(request);
+      let dataBooks = await Book.getAllBooks(request);
+      console.log(dataBooks);
+      const { error } = dataBooks;
+      if (error) throw error;
       // eslint-disable-next-line max-len
       dataBooks = dataBooks.map((book) => ({ id: book.id, name: book.name, publisher: book.publisher }));
       return h.response({

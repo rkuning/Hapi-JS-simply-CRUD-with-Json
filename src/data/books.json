@@ -1,6 +1,34 @@
 [
   {
-    "id": "IRta6iKxPZGyJxpe",
+    "id": "6YS-FpRP8q6sXW-9",
+    "name": "Buku A",
+    "year": 2010,
+    "author": "John Doe",
+    "summary": "Lorem ipsum dolor sit amet",
+    "publisher": "Dicoding Indonesia",
+    "pageCount": 100,
+    "readPage": 100,
+    "finished": true,
+    "reading": true,
+    "insertedAt": "2022-12-13T11:04:10.278Z",
+    "updatedAt": "2022-12-13T11:04:10.278Z"
+  },
+  {
+    "id": "AVED9UvhJlezv20i",
+    "name": "Kelas Dicoding",
+    "year": 2010,
+    "author": "John Doe",
+    "summary": "Lorem ipsum dolor sit amet",
+    "publisher": "Dicoding Indonesia",
+    "pageCount": 100,
+    "readPage": 99,
+    "finished": false,
+    "reading": true,
+    "insertedAt": "2022-12-13T11:04:13.530Z",
+    "updatedAt": "2022-12-13T11:04:13.530Z"
+  },
+  {
+    "id": "wUe_cxYb7DTAsmdx",
     "name": "dicoding Jobs",
     "year": 2010,
     "author": "John Doe",
@@ -10,11 +38,11 @@
     "readPage": 0,
     "finished": false,
     "reading": false,
-    "insertedAt": "2022-12-12T18:09:09.302Z",
-    "updatedAt": "2022-12-12T18:09:09.302Z"
+    "insertedAt": "2022-12-13T11:04:16.687Z",
+    "updatedAt": "2022-12-13T11:04:16.687Z"
   },
   {
-    "id": "cCbgBFKy91Ihwcu1",
+    "id": "wCRexi5GI_jRFCZs",
     "name": "Buku A",
     "year": 2010,
     "author": "John Doe",
@@ -24,7 +52,21 @@
     "readPage": 0,
     "finished": false,
     "reading": false,
-    "insertedAt": "2022-12-12T18:09:11.559Z",
-    "updatedAt": "2022-12-12T18:09:11.559Z"
+    "insertedAt": "2022-12-13T11:04:19.614Z",
+    "updatedAt": "2022-12-13T11:04:19.614Z"
+  },
+  {
+    "id": "n7Vs0R1UzYNajfVl",
+    "name": "Buku A Revisi",
+    "year": 2011,
+    "author": "Jane Doe",
+    "summary": "Lorem Dolor sit Ametttt",
+    "publisher": "Dicoding",
+    "pageCount": 200,
+    "readPage": 26,
+    "finished": false,
+    "reading": false,
+    "insertedAt": "2022-12-13T11:23:49.378Z",
+    "updatedAt": "2022-12-13T11:24:03.797Z"
   }
 ]

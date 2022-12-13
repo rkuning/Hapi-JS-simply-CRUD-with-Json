@@ -1,3 +1,4 @@
+/* eslint-disable no-throw-literal */
 /* eslint-disable no-param-reassign */
 const fs = require('fs');
 const util = require('util');
@@ -45,54 +46,44 @@ class Book {
     }
   }
 
-  static async getBooks(request) {
+  static async getBooks() {
     try {
-      const { query } = request;
       let books = await readFile(path.join(__dirname, '../data/books.json'), 'utf8');
-      if (Object.keys(query).length !== 0) {
-        const queries = Object.keys(query);
-        queries.forEach((q) => {
-          // eslint-disable-next-line array-callback-return, consistent-return
-          if (q === 'reading') books = JSON.parse(books).filter((book) => ((parseInt(query[q], 10)) ? book.reading === true : book.reading === false));
-          if (q === 'finished') books = JSON.parse(books).filter((book) => ((parseInt(query[q], 10)) ? book.finished === true : book.finished === false));
-          // perbaikan besuk
-          if (q === 'name') books = JSON.parse(books).filter((book) => book.name.includes(query.name.toLowerCase()));
-        });
-      }
-      if (typeof books !== 'string') books = JSON.stringify(books);
       books = JSON.parse(books).map((book) => {
+        // eslint-disable-next-line max-len
         const {
-          id,
-          name,
-          year,
-          author,
-          summary,
-          publisher,
-          pageCount,
-          readPage,
-          finished,
-          reading,
-          insertedAt,
-          updatedAt,
+          // eslint-disable-next-line max-len
+          id, name, year, author, summary, publisher, pageCount, readPage, finished, reading, insertedAt, updatedAt,
         } = book;
-        return new Book(
-          id,
-          name,
-          year,
-          author,
-          summary,
-          publisher,
-          pageCount,
-          readPage,
-          finished,
-          reading,
-          insertedAt,
-          updatedAt,
-        );
+        // eslint-disable-next-line max-len
+        return new Book(id, name, year, author, summary, publisher, pageCount, readPage, finished, reading, insertedAt, updatedAt);
       });
       return books;
     } catch (error) {
+      // eslint-disable-next-line no-console
       return error;
+    }
+  }
+
+  static async getAllBooks(request) {
+    try {
+      const { query } = request;
+      let books = await this.getBooks();
+      if (Object.keys(query).length !== 0) {
+        const q = Object.keys(query);
+        const check = ['reading', 'finished', 'name'];
+        const valQuery = check.find((qp) => qp === q[0]);
+        if (!valQuery) throw { error: 'Query unknown!' };
+        if (q.length > 1) throw { error: 'Only allow 1 query!' };
+        // eslint-disable-next-line array-callback-return, consistent-return
+        if (q[0] === 'reading') books = books.filter((book) => ((parseInt(query.reading, 10)) ? book.reading === true : book.reading === false));
+        if (q[0] === 'finished') books = books.filter((book) => ((parseInt(query.finished, 10)) ? book.finished === true : book.finished === false));
+        // // perbaikan besuk
+        if (q[0] === 'name') books = books.filter((book) => book.name.includes(query.name));
+      }
+      return books;
+    } catch (error) {
+      return { error };
     }
   }
 
